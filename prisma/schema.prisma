@@ -1,0 +1,52 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Quote {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String
+  email     String
+  vehicle   String
+  services  String[]
+  package   String
+  message   String?
+  createdAt DateTime @default(now())
+
+  @@index([email])
+  @@index([createdAt])
+}
+
+model Review {
+  id           String   @id @default(cuid())
+  reviewerName String
+  rating       Int
+  text         String
+  date         DateTime
+  source       String   @default("google")
+  createdAt    DateTime @default(now())
+
+  @@index([rating])
+}
+
+model Appointment {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String
+  email     String
+  date      DateTime
+  service   String
+  status    String   @default("pending")
+  createdAt DateTime @default(now())
+
+  @@index([date])
+  @@index([status])
+}

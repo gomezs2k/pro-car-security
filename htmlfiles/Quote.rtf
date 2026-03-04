@@ -1,0 +1,477 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2868
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html>\
+<head>\
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Get a Quote</title>\
+    <script src="https://cdn.tailwindcss.com"></script>\
+    <script>\
+        tailwind.config = \{\
+            theme: \{\
+                extend: \{\
+                    colors: \{\
+                        'pro-blue': '#1e40af',\
+                        'pro-red': '#dc2626',\
+                        'pro-dark': '#1f2937',\
+                        'pro-gray': '#6b7280'\
+                    \},\
+                    fontFamily: \{\
+                        'inter': ['Inter', 'sans-serif']\
+                    \}\
+                \}\
+            \}\
+        \}\
+    </script>\
+    <script>window.FontAwesomeConfig = \{ autoReplaceSvg: 'nest'\};</script>\
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>\
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">\
+    <style>::-webkit-scrollbar \{ display: none;\}</style>\
+</head>\
+<body class="font-inter bg-gray-50">\
+\
+<!-- Quick Contact Bar -->\
+<div id="quick-contact" class="bg-pro-dark text-white py-2 text-sm">\
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">\
+        <div class="flex items-center space-x-6">\
+            <div class="flex items-center space-x-2">\
+                <i class="fa-solid fa-phone text-pro-red"></i>\
+                <span>(613) 820-0004</span>\
+            </div>\
+            <div class="flex items-center space-x-2">\
+                <i class="fa-solid fa-clock text-pro-red"></i>\
+                <span>Mon-Fri 9AM-6PM, Sat 9AM-4PM</span>\
+            </div>\
+        </div>\
+        <div class="flex items-center space-x-2">\
+            <i class="fa-solid fa-location-dot text-pro-red"></i>\
+            <span>Ottawa, ON - Mobile Service Available</span>\
+        </div>\
+    </div>\
+</div>\
+\
+<!-- Header -->\
+<header id="header" class="bg-white shadow-lg sticky top-0 z-50">\
+    <div class="max-w-7xl mx-auto px-4">\
+        <div class="flex justify-between items-center py-4">\
+            <div class="flex items-center space-x-3">\
+                <div class="w-12 h-12 bg-gradient-to-br from-pro-blue to-pro-red rounded-lg flex items-center justify-center">\
+                    <i class="fa-solid fa-shield-halved text-white text-xl"></i>\
+                </div>\
+                <div>\
+                    <h1 class="text-2xl font-bold text-pro-dark">Pro Car Security</h1>\
+                    <p class="text-sm text-pro-gray">Professional Auto Security Solutions</p>\
+                </div>\
+            </div>\
+            \
+            <nav class="hidden lg:flex items-center space-x-8">\
+                <a href="#" class="text-pro-gray hover:text-pro-blue transition-colors">Welcome / Landing</a>\
+                <a href="#" class="text-pro-gray hover:text-pro-blue transition-colors">Services</a>\
+                <a href="#" class="text-pro-gray hover:text-pro-blue transition-colors">Pricing & Packages</a>\
+                <a href="#" class="text-pro-gray hover:text-pro-blue transition-colors">Gallery</a>\
+                <a href="#" class="text-pro-gray hover:text-pro-blue transition-colors">Reviews</a>\
+                <a href="#" class="text-pro-gray hover:text-pro-blue transition-colors">About & Contact</a>\
+                <a href="#" class="text-pro-gray hover:text-pro-blue transition-colors">AI Assistant</a>\
+            </nav>\
+\
+            <button class="lg:hidden">\
+                <i class="fa-solid fa-bars text-2xl text-pro-dark"></i>\
+            </button>\
+        </div>\
+    </div>\
+</header>\
+\
+<!-- Quote Hero -->\
+<section id="quote-hero" class="relative h-[200px] bg-gradient-to-r from-pro-blue to-blue-700">\
+    <div class="absolute inset-0 bg-black/20"></div>\
+    <div class="relative z-10 max-w-7xl mx-auto px-4 h-full flex items-center">\
+        <div class="text-white">\
+            <h1 class="text-4xl font-bold mb-4">Get Your Quote</h1>\
+            <p class="text-xl text-blue-100">Fast quote intake optimized for your needs</p>\
+        </div>\
+    </div>\
+</section>\
+\
+<!-- Main Quote Form -->\
+<section id="quote-form-section" class="py-8 lg:py-16">\
+    <div class="max-w-4xl mx-auto px-4">\
+        <div id="quote-form-container" class="bg-white rounded-xl shadow-lg overflow-hidden">\
+            <!-- Form Header -->\
+            <div class="bg-gradient-to-r from-pro-blue to-blue-600 px-6 py-4 text-white">\
+                <h2 class="text-2xl font-bold">Get Your Personalized Quote</h2>\
+                <p class="text-blue-100">Complete the form below for an instant estimate</p>\
+            </div>\
+\
+            <!-- Form Content -->\
+            <div class="p-6 lg:p-8">\
+                <form id="quote-intake-form" class="space-y-6">\
+                    <!-- Service Selection -->\
+                    <div id="service-selection">\
+                        <label class="block text-lg font-semibold text-pro-dark mb-3">Select Service Package</label>\
+                        <div class="grid sm:grid-cols-3 gap-4">\
+                            <label class="relative">\
+                                <input type="radio" name="package" value="essential" class="sr-only peer">\
+                                <div class="p-4 border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-pro-blue peer-checked:bg-blue-50 hover:border-gray-300 transition-all">\
+                                    <div class="text-center">\
+                                        <div class="font-bold text-pro-dark">Essential</div>\
+                                        <div class="text-2xl font-bold text-pro-red">$599</div>\
+                                        <div class="text-sm text-pro-gray">Basic protection</div>\
+                                    </div>\
+                                </div>\
+                            </label>\
+                            <label class="relative">\
+                                <input type="radio" name="package" value="smart" class="sr-only peer">\
+                                <div class="p-4 border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-pro-blue peer-checked:bg-blue-50 hover:border-gray-300 transition-all">\
+                                    <div class="text-center">\
+                                        <div class="font-bold text-pro-dark">Smart Pro</div>\
+                                        <div class="text-2xl font-bold text-pro-red">$899</div>\
+                                        <div class="text-sm text-pro-gray">Most popular</div>\
+                                    </div>\
+                                </div>\
+                            </label>\
+                            <label class="relative">\
+                                <input type="radio" name="package" value="complete" class="sr-only peer">\
+                                <div class="p-4 border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-pro-blue peer-checked:bg-blue-50 hover:border-gray-300 transition-all">\
+                                    <div class="text-center">\
+                                        <div class="font-bold text-pro-dark">Complete</div>\
+                                        <div class="text-2xl font-bold text-pro-red">$1,299</div>\
+                                        <div class="text-sm text-pro-gray">Ultimate security</div>\
+                                    </div>\
+                                </div>\
+                            </label>\
+                        </div>\
+                    </div>\
+\
+                    <!-- Vehicle Information -->\
+                    <div id="vehicle-info">\
+                        <label class="block text-lg font-semibold text-pro-dark mb-3">Vehicle Information</label>\
+                        <div class="grid sm:grid-cols-3 gap-4">\
+                            <div>\
+                                <label class="block text-sm font-medium text-pro-gray mb-2">Year</label>\
+                                <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pro-blue focus:border-transparent">\
+                                    <option value="">Select Year</option>\
+                                    <option value="2024">2024</option>\
+                                    <option value="2023">2023</option>\
+                                    <option value="2022">2022</option>\
+                                    <option value="2021">2021</option>\
+                                    <option value="2020">2020</option>\
+                                    <option value="older">2019 or Older</option>\
+                                </select>\
+                            </div>\
+                            <div>\
+                                <label class="block text-sm font-medium text-pro-gray mb-2">Make</label>\
+                                <input type="text" placeholder="e.g., Toyota" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pro-blue focus:border-transparent">\
+                            </div>\
+                            <div>\
+                                <label class="block text-sm font-medium text-pro-gray mb-2">Model</label>\
+                                <input type="text" placeholder="e.g., Camry" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pro-blue focus:border-transparent">\
+                            </div>\
+                        </div>\
+                    </div>\
+\
+                    <!-- Desired Features -->\
+                    <div id="desired-features">\
+                        <label class="block text-lg font-semibold text-pro-dark mb-3">Desired Features</label>\
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">\
+                            <label class="flex items-center space-x-3">\
+                                <input type="checkbox" class="w-5 h-5 text-pro-blue border-gray-300 rounded focus:ring-pro-blue">\
+                                <span>Remote Start</span>\
+                            </label>\
+                            <label class="flex items-center space-x-3">\
+                                <input type="checkbox" class="w-5 h-5 text-pro-blue border-gray-300 rounded focus:ring-pro-blue">\
+                                <span>GPS Tracking</span>\
+                            </label>\
+                            <label class="flex items-center space-x-3">\
+                                <input type="checkbox" class="w-5 h-5 text-pro-blue border-gray-300 rounded focus:ring-pro-blue">\
+                                <span>Smartphone App</span>\
+                            </label>\
+                            <label class="flex items-center space-x-3">\
+                                <input type="checkbox" class="w-5 h-5 text-pro-blue border-gray-300 rounded focus:ring-pro-blue">\
+                                <span>Backup Camera</span>\
+                            </label>\
+                            <label class="flex items-center space-x-3">\
+                                <input type="checkbox" class="w-5 h-5 text-pro-blue border-gray-300 rounded focus:ring-pro-blue">\
+                                <span>Dash Cam</span>\
+                            </label>\
+                            <label class="flex items-center space-x-3">\
+                                <input type="checkbox" class="w-5 h-5 text-pro-blue border-gray-300 rounded focus:ring-pro-blue">\
+                                <span>Block Heater Timer</span>\
+                            </label>\
+                        </div>\
+                    </div>\
+\
+                    <!-- Photo Upload -->\
+                    <div id="photo-upload">\
+                        <label class="block text-lg font-semibold text-pro-dark mb-3">Upload Vehicle Photos (Optional)</label>\
+                        <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-pro-blue transition-colors">\
+                            <i class="fa-solid fa-cloud-upload-alt text-4xl text-gray-400 mb-4"></i>\
+                            <p class="text-pro-gray mb-2">Drag and drop photos here, or click to browse</p>\
+                            <p class="text-sm text-pro-gray">Helps us provide more accurate quotes</p>\
+                            <input type="file" multiple accept="image/*" class="hidden">\
+                            <button type="button" class="mt-4 px-6 py-2 bg-pro-blue text-white rounded-lg hover:bg-blue-700 transition-colors">\
+                                Choose Files\
+                            </button>\
+                        </div>\
+                    </div>\
+\
+                    <!-- Budget Range -->\
+                    <div id="budget-range">\
+                        <label class="block text-lg font-semibold text-pro-dark mb-3">Budget Range</label>\
+                        <div class="grid sm:grid-cols-4 gap-3">\
+                            <label class="relative">\
+                                <input type="radio" name="budget" value="under-600" class="sr-only peer">\
+                                <div class="p-3 border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-pro-blue peer-checked:bg-blue-50 text-center">\
+                                    <div class="font-medium">Under $600</div>\
+                                </div>\
+                            </label>\
+                            <label class="relative">\
+                                <input type="radio" name="budget" value="600-900" class="sr-only peer">\
+                                <div class="p-3 border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-pro-blue peer-checked:bg-blue-50 text-center">\
+                                    <div class="font-medium">$600 - $900</div>\
+                                </div>\
+                            </label>\
+                            <label class="relative">\
+                                <input type="radio" name="budget" value="900-1300" class="sr-only peer">\
+                                <div class="p-3 border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-pro-blue peer-checked:bg-blue-50 text-center">\
+                                    <div class="font-medium">$900 - $1,300</div>\
+                                </div>\
+                            </label>\
+                            <label class="relative">\
+                                <input type="radio" name="budget" value="over-1300" class="sr-only peer">\
+                                <div class="p-3 border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-pro-blue peer-checked:bg-blue-50 text-center">\
+                                    <div class="font-medium">Over $1,300</div>\
+                                </div>\
+                            </label>\
+                        </div>\
+                    </div>\
+\
+                    <!-- Contact Information -->\
+                    <div id="contact-info">\
+                        <label class="block text-lg font-semibold text-pro-dark mb-3">Contact Information</label>\
+                        <div class="grid sm:grid-cols-2 gap-4">\
+                            <div>\
+                                <label class="block text-sm font-medium text-pro-gray mb-2">Full Name *</label>\
+                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pro-blue focus:border-transparent">\
+                            </div>\
+                            <div>\
+                                <label class="block text-sm font-medium text-pro-gray mb-2">Phone Number *</label>\
+                                <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pro-blue focus:border-transparent">\
+                            </div>\
+                        </div>\
+                        <div class="mt-4">\
+                            <label class="block text-sm font-medium text-pro-gray mb-2">Email Address</label>\
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pro-blue focus:border-transparent">\
+                        </div>\
+                    </div>\
+\
+                    <!-- Contact Method Preference -->\
+                    <div id="contact-method">\
+                        <label class="block text-lg font-semibold text-pro-dark mb-3">Preferred Contact Method</label>\
+                        <div class="grid sm:grid-cols-3 gap-3">\
+                            <label class="flex items-center space-x-3">\
+                                <input type="radio" name="contact-method" value="phone" class="w-5 h-5 text-pro-blue border-gray-300 focus:ring-pro-blue">\
+                                <span>Phone Call</span>\
+                            </label>\
+                            <label class="flex items-center space-x-3">\
+                                <input type="radio" name="contact-method" value="text" class="w-5 h-5 text-pro-blue border-gray-300 focus:ring-pro-blue">\
+                                <span>Text Message</span>\
+                            </label>\
+                            <label class="flex items-center space-x-3">\
+                                <input type="radio" name="contact-method" value="email" class="w-5 h-5 text-pro-blue border-gray-300 focus:ring-pro-blue">\
+                                <span>Email</span>\
+                            </label>\
+                        </div>\
+                    </div>\
+\
+                    <!-- Consent Checkbox -->\
+                    <div id="consent-section" class="bg-gray-50 p-4 rounded-lg">\
+                        <label class="flex items-start space-x-3">\
+                            <input type="checkbox" required class="w-5 h-5 text-pro-blue border-gray-300 rounded focus:ring-pro-blue mt-1">\
+                            <span class="text-sm text-pro-gray">\
+                                I consent to being contacted by Pro Car Security regarding this quote request. I understand that message and data rates may apply, and I can opt out at any time. *\
+                            </span>\
+                        </label>\
+                    </div>\
+\
+                    <!-- Submit Button -->\
+                    <button type="submit" class="w-full bg-gradient-to-r from-pro-blue to-blue-600 text-white py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-blue-700 transition-all transform hover:scale-105">\
+                        <i class="fa-solid fa-paper-plane mr-2"></i>Get My Quote Now\
+                    </button>\
+                </form>\
+            </div>\
+        </div>\
+\
+        <!-- Confirmation State (Hidden by default) -->\
+        <div id="confirmation-state" class="bg-white rounded-xl shadow-lg p-8 text-center hidden">\
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">\
+                <i class="fa-solid fa-check text-green-600 text-3xl"></i>\
+            </div>\
+            <h2 class="text-3xl font-bold text-pro-dark mb-4">Quote Request Submitted!</h2>\
+            <p class="text-xl text-pro-gray mb-8">We'll contact you within 2 hours with your personalized quote</p>\
+            \
+            <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">\
+                <button class="bg-pro-blue text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">\
+                    <i class="fa-solid fa-calendar-check mr-2"></i>Book Now\
+                </button>\
+                <button class="bg-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition-colors">\
+                    <i class="fa-solid fa-robot mr-2"></i>Chat with AI\
+                </button>\
+                <button class="bg-pro-red text-white py-3 px-6 rounded-lg font-semibold hover:bg-red-700 transition-colors">\
+                    <i class="fa-solid fa-phone mr-2"></i>Call Now\
+                </button>\
+            </div>\
+        </div>\
+    </div>\
+</section>\
+\
+<!-- Quick Benefits -->\
+<section id="quick-benefits" class="py-12 bg-white">\
+    <div class="max-w-6xl mx-auto px-4">\
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">\
+            <div class="text-center">\
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">\
+                    <i class="fa-solid fa-clock text-pro-blue text-2xl"></i>\
+                </div>\
+                <h3 class="font-bold text-pro-dark mb-2">2-Hour Response</h3>\
+                <p class="text-sm text-pro-gray">Quick turnaround on all quotes</p>\
+            </div>\
+            <div class="text-center">\
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">\
+                    <i class="fa-solid fa-dollar-sign text-green-600 text-2xl"></i>\
+                </div>\
+                <h3 class="font-bold text-pro-dark mb-2">No Obligation</h3>\
+                <p class="text-sm text-pro-gray">Free quotes with no pressure</p>\
+            </div>\
+            <div class="text-center">\
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">\
+                    <i class="fa-solid fa-shield-check text-purple-600 text-2xl"></i>\
+                </div>\
+                <h3 class="font-bold text-pro-dark mb-2">Expert Advice</h3>\
+                <p class="text-sm text-pro-gray">Professional recommendations</p>\
+            </div>\
+            <div class="text-center">\
+                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">\
+                    <i class="fa-solid fa-mobile-alt text-pro-red text-2xl"></i>\
+                </div>\
+                <h3 class="font-bold text-pro-dark mb-2">Mobile Service</h3>\
+                <p class="text-sm text-pro-gray">We come to you anywhere in Ottawa</p>\
+            </div>\
+        </div>\
+    </div>\
+</section>\
+\
+<!-- Footer -->\
+<footer id="footer" class="bg-pro-dark text-white py-12">\
+    <div class="max-w-7xl mx-auto px-4">\
+        <div class="grid lg:grid-cols-4 gap-8">\
+            <div>\
+                <div class="flex items-center space-x-3 mb-4">\
+                    <div class="w-10 h-10 bg-gradient-to-br from-pro-blue to-pro-red rounded-lg flex items-center justify-center">\
+                        <i class="fa-solid fa-shield-halved text-white"></i>\
+                    </div>\
+                    <h3 class="text-xl font-bold">Pro Car Security</h3>\
+                </div>\
+                <p class="text-gray-400 mb-4">Professional auto security solutions for Ottawa and surrounding areas.</p>\
+                <div class="flex space-x-3">\
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-pro-blue transition-colors">\
+                        <i class="fa-brands fa-facebook"></i>\
+                    </a>\
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-pro-blue transition-colors">\
+                        <i class="fa-brands fa-google"></i>\
+                    </a>\
+                </div>\
+            </div>\
+            <div>\
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>\
+                <ul class="space-y-2 text-gray-400">\
+                    <li><a href="#" class="hover:text-white transition-colors">Services</a></li>\
+                    <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>\
+                    <li><a href="#" class="hover:text-white transition-colors">Gallery</a></li>\
+                    <li><a href="#" class="hover:text-white transition-colors">Reviews</a></li>\
+                </ul>\
+            </div>\
+            <div>\
+                <h4 class="text-lg font-semibold mb-4">Contact Info</h4>\
+                <ul class="space-y-2 text-gray-400">\
+                    <li class="flex items-center space-x-2">\
+                        <i class="fa-solid fa-phone text-pro-red"></i>\
+                        <span>(613) 820-0004</span>\
+                    </li>\
+                    <li class="flex items-center space-x-2">\
+                        <i class="fa-solid fa-location-dot text-pro-red"></i>\
+                        <span>Ottawa, ON</span>\
+                    </li>\
+                    <li class="flex items-center space-x-2">\
+                        <i class="fa-solid fa-clock text-pro-red"></i>\
+                        <span>Mon-Fri 9AM-6PM</span>\
+                    </li>\
+                </ul>\
+            </div>\
+            <div>\
+                <h4 class="text-lg font-semibold mb-4">Emergency Service</h4>\
+                <p class="text-gray-400 mb-4">24/7 emergency lockout assistance available</p>\
+                <button class="bg-pro-red text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-700 transition-colors">\
+                    Emergency Call\
+                </button>\
+            </div>\
+        </div>\
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">\
+            <p>&copy; 2024 Pro Car Security. All rights reserved.</p>\
+        </div>\
+    </div>\
+</footer>\
+\
+<script>\
+document.addEventListener('DOMContentLoaded', function() \{\
+    const form = document.getElementById('quote-intake-form');\
+    const formContainer = document.getElementById('quote-form-container');\
+    const confirmationState = document.getElementById('confirmation-state');\
+\
+    form.addEventListener('submit', function(e) \{\
+        e.preventDefault();\
+        \
+        formContainer.classList.add('hidden');\
+        confirmationState.classList.remove('hidden');\
+        \
+        window.scrollTo(\{\
+            top: confirmationState.offsetTop - 100,\
+            behavior: 'smooth'\
+        \});\
+    \});\
+\
+    const fileInput = document.querySelector('input[type="file"]');\
+    const uploadArea = fileInput.parentElement;\
+    \
+    uploadArea.addEventListener('click', function() \{\
+        fileInput.click();\
+    \});\
+\
+    uploadArea.addEventListener('dragover', function(e) \{\
+        e.preventDefault();\
+        uploadArea.classList.add('border-pro-blue');\
+    \});\
+\
+    uploadArea.addEventListener('dragleave', function() \{\
+        uploadArea.classList.remove('border-pro-blue');\
+    \});\
+\
+    uploadArea.addEventListener('drop', function(e) \{\
+        e.preventDefault();\
+        uploadArea.classList.remove('border-pro-blue');\
+        const files = e.dataTransfer.files;\
+        if (files.length > 0) \{\
+            fileInput.files = files;\
+        \}\
+    \});\
+\});\
+</script>\
+\
+</body>\
+</html>}

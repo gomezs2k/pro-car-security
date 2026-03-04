@@ -1,0 +1,431 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2868
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html>\
+<head>\
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Service Details & Booking</title>\
+    <script src="https://cdn.tailwindcss.com"></script>\
+    <script>\
+        tailwind.config = \{\
+            theme: \{\
+                extend: \{\
+                    colors: \{\
+                        'pro-blue': '#1e40af',\
+                        'pro-red': '#dc2626',\
+                        'pro-dark': '#1f2937',\
+                        'pro-gray': '#6b7280'\
+                    \},\
+                    fontFamily: \{\
+                        'inter': ['Inter', 'sans-serif']\
+                    \}\
+                \}\
+            \}\
+        \}\
+    </script>\
+    <script>window.FontAwesomeConfig = \{ autoReplaceSvg: 'nest'\};</script>\
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>\
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">\
+    <style>::-webkit-scrollbar \{ display: none;\}</style>\
+</head>\
+<body class="font-inter">\
+\
+<!-- Quick Contact Bar -->\
+<div id="quick-contact" class="bg-pro-dark text-white py-2 text-sm">\
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">\
+        <div class="flex items-center space-x-6">\
+            <div class="flex items-center space-x-2">\
+                <i class="fa-solid fa-phone text-pro-red"></i>\
+                <span>(613) 820-0004</span>\
+            </div>\
+            <div class="flex items-center space-x-2">\
+                <i class="fa-solid fa-clock text-pro-red"></i>\
+                <span>Mon-Fri 9AM-6PM, Sat 9AM-4PM</span>\
+            </div>\
+        </div>\
+        <div class="flex items-center space-x-2">\
+            <i class="fa-solid fa-location-dot text-pro-red"></i>\
+            <span>Ottawa, ON - Mobile Service Available</span>\
+        </div>\
+    </div>\
+</div>\
+\
+<!-- Header -->\
+<header id="header" class="bg-white shadow-lg sticky top-0 z-50">\
+    <div class="max-w-7xl mx-auto px-4">\
+        <div class="flex justify-between items-center py-4">\
+            <div class="flex items-center space-x-3">\
+                <div class="w-12 h-12 bg-gradient-to-br from-pro-blue to-pro-red rounded-lg flex items-center justify-center">\
+                    <i class="fa-solid fa-shield-halved text-white text-xl"></i>\
+                </div>\
+                <div>\
+                    <h1 class="text-2xl font-bold text-pro-dark">Pro Car Security</h1>\
+                    <p class="text-sm text-pro-gray">Professional Auto Security Solutions</p>\
+                </div>\
+            </div>\
+            \
+            <nav class="hidden lg:flex items-center space-x-8">\
+                <a href="#" class="text-pro-gray hover:text-pro-blue transition-colors">Welcome / Landing</a>\
+                <a href="#" class="text-pro-blue font-semibold border-b-2 border-pro-blue pb-1">Services</a>\
+                <a href="#" class="text-pro-gray hover:text-pro-blue transition-colors">Pricing & Packages</a>\
+                <a href="#" class="text-pro-gray hover:text-pro-blue transition-colors">Gallery</a>\
+                <a href="#" class="text-pro-gray hover:text-pro-blue transition-colors">Reviews</a>\
+                <a href="#" class="text-pro-gray hover:text-pro-blue transition-colors">About & Contact</a>\
+                <a href="#" class="text-pro-gray hover:text-pro-blue transition-colors">AI Assistant</a>\
+            </nav>\
+\
+            <button class="lg:hidden">\
+                <i class="fa-solid fa-bars text-2xl text-pro-dark"></i>\
+            </button>\
+        </div>\
+    </div>\
+</header>\
+\
+<!-- Service Details Hero -->\
+<section id="service-hero" class="relative h-[300px] bg-gradient-to-r from-pro-blue to-blue-700">\
+    <div class="absolute inset-0 bg-black/20"></div>\
+    <div class="relative z-10 max-w-7xl mx-auto px-4 h-full flex items-center">\
+        <div class="text-white">\
+            <div class="flex items-center space-x-3 mb-4">\
+                <a href="#" class="text-blue-200 hover:text-white">Services</a>\
+                <i class="fa-solid fa-chevron-right text-blue-300"></i>\
+                <span>Smart Alarm System</span>\
+            </div>\
+            <h1 class="text-4xl font-bold mb-4">Smart Alarm System</h1>\
+            <p class="text-xl text-blue-100">Advanced protection with smartphone app control and real-time alerts</p>\
+        </div>\
+    </div>\
+</section>\
+\
+<!-- Main Content -->\
+<div class="max-w-7xl mx-auto px-4 py-12">\
+    <div class="grid lg:grid-cols-3 gap-12">\
+        \
+        <!-- Service Details -->\
+        <div class="lg:col-span-2 space-y-12">\
+            \
+            <!-- Overview -->\
+            <div id="service-overview" class="bg-white rounded-xl shadow-lg p-8">\
+                <h2 class="text-3xl font-bold text-pro-dark mb-6">Service Overview</h2>\
+                <div class="grid md:grid-cols-2 gap-8 mb-8">\
+                    <div>\
+                        <img class="w-full h-48 object-cover rounded-lg shadow-md" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1a3b2391ee-327aa204e4d5bb4811ef.png" alt="modern car alarm system with smartphone app interface, LED status indicators, professional installation" />\
+                    </div>\
+                    <div>\
+                        <p class="text-pro-gray mb-6">Our Smart Alarm System provides comprehensive vehicle protection with cutting-edge technology. Monitor and control your vehicle's security remotely through our intuitive smartphone app.</p>\
+                        <div class="space-y-3">\
+                            <div class="flex items-center space-x-3">\
+                                <i class="fa-solid fa-check-circle text-green-500"></i>\
+                                <span class="text-pro-gray">Smartphone app control</span>\
+                            </div>\
+                            <div class="flex items-center space-x-3">\
+                                <i class="fa-solid fa-check-circle text-green-500"></i>\
+                                <span class="text-pro-gray">GPS tracking & location alerts</span>\
+                            </div>\
+                            <div class="flex items-center space-x-3">\
+                                <i class="fa-solid fa-check-circle text-green-500"></i>\
+                                <span class="text-pro-gray">Real-time notifications</span>\
+                            </div>\
+                            <div class="flex items-center space-x-3">\
+                                <i class="fa-solid fa-check-circle text-green-500"></i>\
+                                <span class="text-pro-gray">Professional installation</span>\
+                            </div>\
+                        </div>\
+                    </div>\
+                </div>\
+            </div>\
+\
+            <!-- Features List -->\
+            <div id="features-section" class="bg-white rounded-xl shadow-lg p-8">\
+                <h3 class="text-2xl font-bold text-pro-dark mb-6">Key Features</h3>\
+                <div class="grid md:grid-cols-2 gap-6">\
+                    <div class="space-y-4">\
+                        <div class="flex items-start space-x-3">\
+                            <div class="w-8 h-8 bg-pro-blue rounded-lg flex items-center justify-center mt-1">\
+                                <i class="fa-solid fa-mobile-screen text-white text-sm"></i>\
+                            </div>\
+                            <div>\
+                                <h4 class="font-semibold text-pro-dark">Smartphone Integration</h4>\
+                                <p class="text-sm text-pro-gray">Control your alarm system from anywhere with our iOS and Android app</p>\
+                            </div>\
+                        </div>\
+                        <div class="flex items-start space-x-3">\
+                            <div class="w-8 h-8 bg-pro-blue rounded-lg flex items-center justify-center mt-1">\
+                                <i class="fa-solid fa-satellite text-white text-sm"></i>\
+                            </div>\
+                            <div>\
+                                <h4 class="font-semibold text-pro-dark">GPS Tracking</h4>\
+                                <p class="text-sm text-pro-gray">Real-time location tracking and theft recovery assistance</p>\
+                            </div>\
+                        </div>\
+                        <div class="flex items-start space-x-3">\
+                            <div class="w-8 h-8 bg-pro-blue rounded-lg flex items-center justify-center mt-1">\
+                                <i class="fa-solid fa-bell text-white text-sm"></i>\
+                            </div>\
+                            <div>\
+                                <h4 class="font-semibold text-pro-dark">Instant Alerts</h4>\
+                                <p class="text-sm text-pro-gray">Receive immediate notifications for any security events</p>\
+                            </div>\
+                        </div>\
+                    </div>\
+                    <div class="space-y-4">\
+                        <div class="flex items-start space-x-3">\
+                            <div class="w-8 h-8 bg-pro-blue rounded-lg flex items-center justify-center mt-1">\
+                                <i class="fa-solid fa-shield-halved text-white text-sm"></i>\
+                            </div>\
+                            <div>\
+                                <h4 class="font-semibold text-pro-dark">Multi-Zone Protection</h4>\
+                                <p class="text-sm text-pro-gray">Advanced sensors for doors, trunk, hood, and interior monitoring</p>\
+                            </div>\
+                        </div>\
+                        <div class="flex items-start space-x-3">\
+                            <div class="w-8 h-8 bg-pro-blue rounded-lg flex items-center justify-center mt-1">\
+                                <i class="fa-solid fa-clock text-white text-sm"></i>\
+                            </div>\
+                            <div>\
+                                <h4 class="font-semibold text-pro-dark">24/7 Monitoring</h4>\
+                                <p class="text-sm text-pro-gray">Continuous monitoring with cloud connectivity</p>\
+                            </div>\
+                        </div>\
+                        <div class="flex items-start space-x-3">\
+                            <div class="w-8 h-8 bg-pro-blue rounded-lg flex items-center justify-center mt-1">\
+                                <i class="fa-solid fa-battery-three-quarters text-white text-sm"></i>\
+                            </div>\
+                            <div>\
+                                <h4 class="font-semibold text-pro-dark">Backup Battery</h4>\
+                                <p class="text-sm text-pro-gray">Built-in backup power for continuous protection</p>\
+                            </div>\
+                        </div>\
+                    </div>\
+                </div>\
+            </div>\
+\
+            <!-- Compatible Vehicles -->\
+            <div id="compatibility-section" class="bg-white rounded-xl shadow-lg p-8">\
+                <h3 class="text-2xl font-bold text-pro-dark mb-6">Compatible Vehicles</h3>\
+                <div class="grid md:grid-cols-3 gap-6">\
+                    <div class="text-center p-4 bg-gray-50 rounded-lg">\
+                        <i class="fa-solid fa-car text-3xl text-pro-blue mb-3"></i>\
+                        <h4 class="font-semibold text-pro-dark mb-2">Sedans & Coupes</h4>\
+                        <p class="text-sm text-pro-gray">Most 2010+ models supported</p>\
+                    </div>\
+                    <div class="text-center p-4 bg-gray-50 rounded-lg">\
+                        <i class="fa-solid fa-truck text-3xl text-pro-blue mb-3"></i>\
+                        <h4 class="font-semibold text-pro-dark mb-2">SUVs & Trucks</h4>\
+                        <p class="text-sm text-pro-gray">Full-size and compact models</p>\
+                    </div>\
+                    <div class="text-center p-4 bg-gray-50 rounded-lg">\
+                        <i class="fa-solid fa-van-shuttle text-3xl text-pro-blue mb-3"></i>\
+                        <h4 class="font-semibold text-pro-dark mb-2">Vans & Commercial</h4>\
+                        <p class="text-sm text-pro-gray">Fleet installation available</p>\
+                    </div>\
+                </div>\
+                <div class="mt-6 p-4 bg-blue-50 rounded-lg">\
+                    <p class="text-sm text-pro-gray"><strong>Note:</strong> Compatibility varies by vehicle year and model. Our technicians will verify compatibility during consultation.</p>\
+                </div>\
+            </div>\
+\
+            <!-- Before/After Images -->\
+            <div id="before-after-section" class="bg-white rounded-xl shadow-lg p-8">\
+                <h3 class="text-2xl font-bold text-pro-dark mb-6">Installation Examples</h3>\
+                <div class="grid md:grid-cols-2 gap-8">\
+                    <div>\
+                        <h4 class="font-semibold text-pro-dark mb-3">Control Module Installation</h4>\
+                        <img class="w-full h-48 object-cover rounded-lg shadow-md mb-3" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/a8cdcca08e-7db6e8a7e5f41e69d8e7.png" alt="car alarm control module professionally installed under dashboard, clean wiring, automotive electronics" />\
+                        <p class="text-sm text-pro-gray">Professional installation with clean wiring and hidden placement</p>\
+                    </div>\
+                    <div>\
+                        <h4 class="font-semibold text-pro-dark mb-3">LED Status Indicator</h4>\
+                        <img class="w-full h-48 object-cover rounded-lg shadow-md mb-3" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/00f9ebed0e-c178c174c4582e1170fc.png" alt="car alarm LED status light installed on dashboard, blinking security indicator, professional automotive installation" />\
+                        <p class="text-sm text-pro-gray">Discreet LED indicator for visual security confirmation</p>\
+                    </div>\
+                </div>\
+            </div>\
+\
+            <!-- FAQ Section -->\
+            <div id="faq-section" class="bg-white rounded-xl shadow-lg p-8">\
+                <h3 class="text-2xl font-bold text-pro-dark mb-6">Frequently Asked Questions</h3>\
+                <div class="space-y-4">\
+                    <div class="border-b border-gray-200 pb-4">\
+                        <h4 class="font-semibold text-pro-dark mb-2">How long does installation take?</h4>\
+                        <p class="text-pro-gray">Typical installation takes 2-4 hours depending on your vehicle and selected features. We'll provide an accurate time estimate during consultation.</p>\
+                    </div>\
+                    <div class="border-b border-gray-200 pb-4">\
+                        <h4 class="font-semibold text-pro-dark mb-2">Does this affect my vehicle warranty?</h4>\
+                        <p class="text-pro-gray">Our professional installation follows manufacturer guidelines and won't void your warranty. We provide documentation for warranty purposes.</p>\
+                    </div>\
+                    <div class="border-b border-gray-200 pb-4">\
+                        <h4 class="font-semibold text-pro-dark mb-2">What's included in the warranty?</h4>\
+                        <p class="text-pro-gray">We provide a 2-year warranty on parts and labor, plus lifetime support for the smartphone app and system updates.</p>\
+                    </div>\
+                    <div>\
+                        <h4 class="font-semibold text-pro-dark mb-2">Can I monitor multiple vehicles?</h4>\
+                        <p class="text-pro-gray">Yes, our app supports multiple vehicle monitoring from a single account. Perfect for families or fleet management.</p>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+\
+        <!-- Booking Module -->\
+        <div class="lg:col-span-1">\
+            <div id="booking-module" class="bg-white rounded-xl shadow-lg p-6 sticky top-24">\
+                <div class="text-center mb-6">\
+                    <div class="text-3xl font-bold text-pro-red mb-2">Starting at $599</div>\
+                    <div class="text-sm text-pro-gray">Professional installation included</div>\
+                    <div class="text-sm text-green-600 font-medium">\uc0\u10003  2-year warranty</div>\
+                </div>\
+\
+                <div class="space-y-4 mb-6">\
+                    <div>\
+                        <label class="block text-sm font-medium text-pro-dark mb-2">Select Service Package</label>\
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pro-blue focus:border-transparent">\
+                            <option>Smart Alarm Basic - $599</option>\
+                            <option>Smart Alarm Pro - $799</option>\
+                            <option>Smart Alarm Premium - $999</option>\
+                        </select>\
+                    </div>\
+\
+                    <div class="grid grid-cols-2 gap-3">\
+                        <div>\
+                            <label class="block text-sm font-medium text-pro-dark mb-2">Vehicle Year</label>\
+                            <input type="text" placeholder="2020" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pro-blue focus:border-transparent">\
+                        </div>\
+                        <div>\
+                            <label class="block text-sm font-medium text-pro-dark mb-2">Make</label>\
+                            <input type="text" placeholder="Toyota" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pro-blue focus:border-transparent">\
+                        </div>\
+                    </div>\
+\
+                    <div>\
+                        <label class="block text-sm font-medium text-pro-dark mb-2">Model</label>\
+                        <input type="text" placeholder="Camry" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pro-blue focus:border-transparent">\
+                    </div>\
+\
+                    <div class="grid grid-cols-2 gap-3">\
+                        <div>\
+                            <label class="block text-sm font-medium text-pro-dark mb-2">Preferred Date</label>\
+                            <input type="date" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pro-blue focus:border-transparent">\
+                        </div>\
+                        <div>\
+                            <label class="block text-sm font-medium text-pro-dark mb-2">Time Slot</label>\
+                            <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pro-blue focus:border-transparent">\
+                                <option>9:00 AM</option>\
+                                <option>11:00 AM</option>\
+                                <option>1:00 PM</option>\
+                                <option>3:00 PM</option>\
+                            </select>\
+                        </div>\
+                    </div>\
+\
+                    <div>\
+                        <label class="block text-sm font-medium text-pro-dark mb-2">Contact Information</label>\
+                        <input type="text" placeholder="Full Name" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pro-blue focus:border-transparent mb-3">\
+                        <input type="tel" placeholder="Phone Number" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pro-blue focus:border-transparent mb-3">\
+                        <input type="email" placeholder="Email Address" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pro-blue focus:border-transparent">\
+                    </div>\
+                </div>\
+\
+                <button class="w-full bg-pro-blue text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors mb-4">\
+                    <i class="fa-solid fa-calendar-check mr-2"></i>Book Installation\
+                </button>\
+\
+                <div class="grid grid-cols-2 gap-3 mb-6">\
+                    <button class="flex items-center justify-center space-x-2 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition-colors">\
+                        <i class="fa-solid fa-phone"></i>\
+                        <span class="text-sm">Call Now</span>\
+                    </button>\
+                    <button class="flex items-center justify-center space-x-2 bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors">\
+                        <i class="fa-solid fa-message"></i>\
+                        <span class="text-sm">Text Us</span>\
+                    </button>\
+                </div>\
+\
+                <button class="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-purple-700 transition-all">\
+                    <i class="fa-solid fa-robot mr-2"></i>Ask AI About This Service\
+                </button>\
+\
+                <div class="mt-6 p-4 bg-gray-50 rounded-lg">\
+                    <div class="text-sm text-pro-gray text-center">\
+                        <i class="fa-solid fa-shield-check text-green-500 mr-1"></i>\
+                        Fully licensed & insured<br>\
+                        <i class="fa-solid fa-clock text-blue-500 mr-1"></i>\
+                        Same-day service available<br>\
+                        <i class="fa-solid fa-truck text-purple-500 mr-1"></i>\
+                        Mobile installation service\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+    </div>\
+</div>\
+\
+<!-- Footer -->\
+<footer id="footer" class="bg-pro-dark text-white py-12">\
+    <div class="max-w-7xl mx-auto px-4">\
+        <div class="grid md:grid-cols-4 gap-8">\
+            <div class="space-y-4">\
+                <div class="flex items-center space-x-3">\
+                    <div class="w-10 h-10 bg-gradient-to-br from-pro-blue to-pro-red rounded-lg flex items-center justify-center">\
+                        <i class="fa-solid fa-shield-halved text-white"></i>\
+                    </div>\
+                    <h3 class="text-xl font-bold">Pro Car Security</h3>\
+                </div>\
+                <p class="text-gray-400">Ottawa's premier automotive security specialists. Protecting your investment with professional installation and premium products.</p>\
+            </div>\
+\
+            <div>\
+                <h4 class="text-lg font-semibold mb-4">Services</h4>\
+                <ul class="space-y-2 text-gray-400">\
+                    <li><a href="#" class="hover:text-white transition-colors">Car Alarms</a></li>\
+                    <li><a href="#" class="hover:text-white transition-colors">Remote Start</a></li>\
+                    <li><a href="#" class="hover:text-white transition-colors">Key Fobs</a></li>\
+                    <li><a href="#" class="hover:text-white transition-colors">Dash Cams</a></li>\
+                </ul>\
+            </div>\
+\
+            <div>\
+                <h4 class="text-lg font-semibold mb-4">Contact</h4>\
+                <ul class="space-y-2 text-gray-400">\
+                    <li class="flex items-center space-x-2">\
+                        <i class="fa-solid fa-phone text-pro-red"></i>\
+                        <span>(613) 820-0004</span>\
+                    </li>\
+                    <li class="flex items-center space-x-2">\
+                        <i class="fa-solid fa-envelope text-pro-red"></i>\
+                        <span>info@procarsecurity.com</span>\
+                    </li>\
+                    <li class="flex items-center space-x-2">\
+                        <i class="fa-solid fa-location-dot text-pro-red"></i>\
+                        <span>Ottawa, ON</span>\
+                    </li>\
+                </ul>\
+            </div>\
+\
+            <div>\
+                <h4 class="text-lg font-semibold mb-4">Follow Us</h4>\
+                <div class="flex space-x-4">\
+                    <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors">\
+                        <i class="fa-brands fa-facebook-f text-white"></i>\
+                    </a>\
+                    <a href="#" class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center hover:bg-red-700 transition-colors">\
+                        <i class="fa-brands fa-google text-white"></i>\
+                    </a>\
+                </div>\
+            </div>\
+        </div>\
+\
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">\
+            <p>&copy; 2024 Pro Car Security. All rights reserved.</p>\
+        </div>\
+    </div>\
+</footer>\
+\
+</body>\
+</html>}
