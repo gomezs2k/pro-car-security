@@ -161,18 +161,6 @@ export default function Pricing() {
                 Request My Quote
               </Link>
             </div>
-            <div className="bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl p-8">
-              <h3 className="text-2xl font-bold mb-4">AI Assistant</h3>
-              <p className="text-purple-100 mb-6">
-                Not sure what you need? Chat with our AI assistant for recommendations based on your vehicle and goals.
-              </p>
-              <Link
-                href="/ai-assistant"
-                className="block w-full text-center bg-white/10 border border-white/30 text-white py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors"
-              >
-                Chat with AI Assistant
-              </Link>
-            </div>
           </div>
         </div>
       </section>

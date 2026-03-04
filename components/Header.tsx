@@ -14,7 +14,6 @@ export default function Header() {
     { href: '/reviews', label: 'Reviews' },
     { href: '/about', label: 'About & Contact' },
     { href: '/quote', label: 'Get a Quote' },
-    { href: '/ai-assistant', label: 'AI Assistant' },
   ]
 
   return (

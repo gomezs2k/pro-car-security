@@ -308,19 +308,13 @@ export default function Quote() {
               <p className="text-lg text-pro-gray mb-6">
                 We&apos;ll contact you within 2 hours with your personalized quote.
               </p>
-              <div className="grid gap-4 sm:grid-cols-3 max-w-2xl mx-auto">
+              <div className="grid gap-4 sm:grid-cols-2 max-w-2xl mx-auto">
                 <a
                   href="tel:2144895107"
                   className="bg-pro-blue text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm"
                 >
                   Call/Text Now
                 </a>
-                <Link
-                  href="/ai-assistant"
-                  className="bg-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-sm"
-                >
-                  Chat with AI
-                </Link>
                 <Link
                   href="/services"
                   className="bg-pro-red text-white py-3 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors text-sm"
