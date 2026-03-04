@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { prisma } from '@/lib/db'
 
 export async function POST(request: NextRequest) {
   try {
+    const { prisma } = await import('@/lib/db')
     const body = await request.json()
 
     const quote = await prisma.quote.create({
@@ -36,6 +36,7 @@ export async function POST(request: NextRequest) {
 
 export async function GET() {
   try {
+    const { prisma } = await import('@/lib/db')
     const quotes = await prisma.quote.findMany({
       orderBy: { createdAt: 'desc' },
     })
