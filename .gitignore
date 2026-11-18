@@ -1,1 +1,32 @@
+# dependencies
 node_modules
+.pnp
+.pnp.js
+
+# build / cache
+.next
+out
+dist
+build
+tsconfig.tsbuildinfo
+
+# env & secrets
+.env
+.env.*
+!.env.example
+
+# debug / os
+npm-debug.log*
+.DS_Store
+*.pem
+
+# vercel
+.vercel
+
+# prisma
+prisma/*.db
+prisma/*.db-journal
+
+# IDE
+.idea
+.vscode
