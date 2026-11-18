@@ -254,7 +254,7 @@ export default function AlarmDetail() {
                   </a>
                 </div>
                 <p className="text-xs text-pro-gray text-center">
-                  Fully licensed &amp; insured. Same-day and mobile installation available in most cases.
+                  Mobile installation — we come to you. Same-day service available in most cases.
                 </p>
               </div>
             </div>

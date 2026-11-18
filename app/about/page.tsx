@@ -110,7 +110,7 @@ export default function About() {
             <div className="bg-gray-50 rounded-lg p-8 shadow-md text-center">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-pro-blue to-pro-red flex items-center justify-center text-2xl text-white mx-auto mb-4">📍</div>
               <h3 className="font-bold text-pro-dark mb-2">Location</h3>
-              <p className="text-pro-gray text-sm">725 Peach Tree Ln<br/>Anna, TX 75409</p>
+              <p className="text-pro-gray text-sm">Based in Anna, TX<br/>Mobile service — we come to you</p>
             </div>
             <div className="bg-gray-50 rounded-lg p-8 shadow-md text-center">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-pro-blue to-pro-red flex items-center justify-center text-2xl text-white mx-auto mb-4">🕐</div>
@@ -124,15 +124,14 @@ export default function About() {
             </div>
           </div>
 
-          {/* Map link */}
           <div className="text-center mt-8">
             <a
-              href="https://www.google.com/maps/place/725+Peach+Tree+Ln,+Anna,+TX+75409"
+              href="https://www.google.com/search?kgmid=/g/11wxz92gtw&q=pro+car+security"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary inline-block"
             >
-              View on Google Maps →
+              View our Google Reviews →
             </a>
           </div>
         </div>

@@ -378,6 +378,52 @@
   color: var(--accent);
 }
 
+.trust-item--link {
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.trust-item--link:hover {
+  color: #fff;
+}
+
+.trust-item--highlight span:last-child {
+  color: #ffd54a;
+}
+
+.hero-perk {
+  margin: 0 0 12px;
+  max-width: 34ch;
+  font-family: var(--f-cond);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #e8e8ec;
+}
+
+.hero-perk strong {
+  color: var(--accent);
+}
+
+.hero-reviews {
+  margin: 0 0 20px;
+  font-family: var(--f-cond);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #c8c8d0;
+}
+
+.hero-reviews a {
+  color: #ffd54a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-reviews a:hover {
+  color: #fff;
+}
+
 .hero {
   position: relative;
   overflow: hidden;

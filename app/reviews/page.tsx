@@ -77,7 +77,9 @@ export default function Reviews() {
                 <span key={i} className="text-3xl text-amber-500">★</span>
               ))}
             </div>
-            <p className="text-xl text-pro-gray">Rated 5 stars on Google — see what our customers are saying</p>
+            <p className="text-xl text-pro-gray">
+              <strong>221+</strong> five-star Google reviews — see what our customers are saying
+            </p>
             <a
               href="https://www.google.com/search?kgmid=/g/11wxz92gtw&q=pro+car+security"
               target="_blank"

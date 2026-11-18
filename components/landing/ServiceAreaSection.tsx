@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { SITE, includedAreaCities, DFW_CENTER } from '@/lib/site-content'
+import { SITE, includedAreaCities, SERVICE_AREA_CENTER } from '@/lib/site-content'
 import { milesBetween } from '@/lib/distance'
 import ServiceAreaMap from './ServiceAreaMap'
 
@@ -38,7 +38,7 @@ export default function ServiceAreaSection() {
       const data = await res.json()
       const lat = parseFloat(data.places[0].latitude)
       const lng = parseFloat(data.places[0].longitude)
-      const miles = milesBetween(DFW_CENTER.lat, DFW_CENTER.lng, lat, lng)
+      const miles = milesBetween(SERVICE_AREA_CENTER.lat, SERVICE_AREA_CENTER.lng, lat, lng)
       setDistance(Math.round(miles * 10) / 10)
       setResult(miles <= SITE.serviceRadiusMiles ? 'in' : 'out')
     } catch {
@@ -53,8 +53,9 @@ export default function ServiceAreaSection() {
       <h2 className="section-title">Mobile service area</h2>
       <div className="section-rule" />
       <p className="section-lead">
-        We cover the DFW metro and North Texas with mobile installs. Included travel applies within{' '}
-        {SITE.serviceRadiusMiles} miles of central DFW; beyond that, call or text for a travel quote.
+        We cover DFW and North Texas with mobile installs.{' '}
+        <strong>No travel charge within {SITE.serviceRadiusMiles} miles of Frisco</strong>; beyond that, we quote a
+        custom travel fee upfront.
       </p>
 
       <div className="area-grid">
@@ -63,7 +64,7 @@ export default function ServiceAreaSection() {
             <ServiceAreaMap />
           </div>
           <div className="area-cities">
-            <b>{SITE.serviceRadiusMiles}-mile radius from DFW</b>
+            <b>{SITE.serviceRadiusMiles}-mile radius from Frisco</b>
             <p>
               {cityList} · and surrounding areas within the blue zone on the map.
             </p>
@@ -75,18 +76,18 @@ export default function ServiceAreaSection() {
             <div className="zone">
               <span className="zone-dot g" />
               <div className="zone-body">
-                <b>0–{SITE.serviceRadiusMiles} mi from DFW</b>
-                <span>Standard zone · included travel</span>
+                <b>0–{SITE.serviceRadiusMiles} mi from Frisco</b>
+                <span>Standard zone · no travel charge</span>
               </div>
               <div className="zone-price g">Included</div>
             </div>
             <div className="zone">
               <span className="zone-dot o" />
               <div className="zone-body">
-                <b>{SITE.serviceRadiusMiles + 1}+ mi from DFW</b>
-                <span>Extended travel · quoted upfront</span>
+                <b>{SITE.serviceRadiusMiles + 1}+ mi from Frisco</b>
+                <span>Extended travel · custom fee quoted upfront</span>
               </div>
-              <div className="zone-price o">Extra</div>
+              <div className="zone-price o">Custom fee</div>
             </div>
           </div>
 
@@ -115,8 +116,7 @@ export default function ServiceAreaSection() {
               <div className="zip-result show in-zone">
                 <b>You&apos;re in the zone</b>
                 <span>
-                  About {distance} miles from central DFW — inside our {SITE.serviceRadiusMiles}-mile standard area (no
-                  extra travel).{' '}
+                  About {distance} miles from Frisco — inside our {SITE.serviceRadiusMiles}-mile zone (no travel charge).{' '}
                   <a href={tel} style={{ color: 'var(--accent)' }}>
                     Call or text to book
                   </a>
@@ -128,8 +128,8 @@ export default function ServiceAreaSection() {
               <div className="zip-result show out-zone">
                 <b>Extended travel zone</b>
                 <span>
-                  About {distance} miles from central DFW — past {SITE.serviceRadiusMiles} miles. We may still come with
-                  an extra travel fee.{' '}
+                  About {distance} miles from Frisco — past {SITE.serviceRadiusMiles} miles. We may still come out with a
+                  custom travel fee.{' '}
                   <a href={tel} style={{ color: 'var(--accent)' }}>
                     Call or text {SITE.phoneDisplay}
                   </a>{' '}
@@ -154,9 +154,9 @@ export default function ServiceAreaSection() {
       </div>
 
       <div className="callout">
-        <b>Outside the {SITE.serviceRadiusMiles}-mile DFW zone?</b>
+        <b>Outside the {SITE.serviceRadiusMiles}-mile Frisco zone?</b>
         <p>
-          We may still drive to you with an added travel fee — always quoted before we book.{' '}
+          We may still drive to you — custom travel fee quoted before we book.{' '}
           <a href={tel} style={{ color: 'var(--accent)' }}>
             Call or text {SITE.phoneDisplay}
           </a>{' '}

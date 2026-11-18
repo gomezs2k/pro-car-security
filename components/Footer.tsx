@@ -11,7 +11,7 @@ export default function Footer() {
       <p>
         <a href={tel}>{SITE.phoneDisplay}</a> · {SITE.hours}
       </p>
-      <p>{SITE.address}</p>
+      <p>{SITE.locationLine}</p>
       <p className="site-footer-nav">
         <a href="#services">Services</a>
         {' · '}

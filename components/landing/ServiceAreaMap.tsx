@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { DFW_CENTER, SITE } from '@/lib/site-content'
+import { SERVICE_AREA_CENTER, SITE } from '@/lib/site-content'
 
 const MILES_TO_METERS = 1609.344
 
@@ -22,7 +22,7 @@ export default function ServiceAreaMap() {
         if (cancelled || !containerRef.current) return
 
         map = L.map(el, {
-          center: [DFW_CENTER.lat, DFW_CENTER.lng],
+          center: [SERVICE_AREA_CENTER.lat, SERVICE_AREA_CENTER.lng],
           zoom: 8,
           scrollWheelZoom: false,
           attributionControl: true,
@@ -37,7 +37,7 @@ export default function ServiceAreaMap() {
 
         const radiusM = SITE.serviceRadiusMiles * MILES_TO_METERS
 
-        const zone = L.circle([DFW_CENTER.lat, DFW_CENTER.lng], {
+        const zone = L.circle([SERVICE_AREA_CENTER.lat, SERVICE_AREA_CENTER.lng], {
           radius: radiusM,
           color: '#2f6bff',
           weight: 2,
@@ -46,7 +46,7 @@ export default function ServiceAreaMap() {
           fillOpacity: 0.12,
         }).addTo(map)
 
-        L.circleMarker([DFW_CENTER.lat, DFW_CENTER.lng], {
+        L.circleMarker([SERVICE_AREA_CENTER.lat, SERVICE_AREA_CENTER.lng], {
           radius: 9,
           color: '#ff5b1a',
           weight: 3,
@@ -54,7 +54,7 @@ export default function ServiceAreaMap() {
           fillOpacity: 1,
         })
           .addTo(map)
-          .bindTooltip('DFW service hub', { permanent: false, direction: 'top' })
+          .bindTooltip('Frisco — service radius center', { permanent: false, direction: 'top' })
 
         map.fitBounds(zone.getBounds(), { padding: [24, 24] })
         mapRef.current = map
@@ -78,7 +78,7 @@ export default function ServiceAreaMap() {
       ref={containerRef}
       className="area-map-leaflet"
       role="img"
-      aria-label={`${SITE.serviceRadiusMiles}-mile mobile service radius centered on DFW`}
+      aria-label={`${SITE.serviceRadiusMiles}-mile mobile service radius centered on Frisco`}
     />
   )
 }

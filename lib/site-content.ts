@@ -2,24 +2,29 @@ export const SITE = {
   name: 'Pro Car Security & Audio',
   phone: '2144895107',
   phoneDisplay: '(214) 489-5107',
-  address: '725 Peach Tree Ln, Anna, TX 75409',
+  /** Public location line — no street address on the site */
+  locationLine: 'Based in Anna, TX',
   hours: 'Mon–Sat · 10AM–5PM',
-  /** Customer-facing region label (geo math still uses baseLat/baseLng) */
   marketingRegion: 'DFW',
   baseCity: 'Anna',
   baseState: 'TX',
   baseZip: '75409',
-  /** WGS84 — shop base (address / dispatch) */
+  /** WGS84 — dispatch / internal reference only */
   baseLat: 33.3493,
   baseLng: -96.5489,
-  serviceRadiusMiles: 50,
+  experienceYears: 20,
+  googleReviewCount: 221,
+  googleReviewsUrl:
+    'https://www.google.com/search?kgmid=/g/11wxz92gtw&q=pro+car+security',
+  /** Included mobile travel radius; beyond this, custom travel fee */
+  serviceRadiusMiles: 30,
 } as const
 
-/** Map + ZIP zone checks — center of DFW metro (not shop address) */
-export const DFW_CENTER = {
-  lat: 32.7767,
-  lng: -96.797,
-  label: 'DFW',
+/** Map + ZIP zone checks — centered on Frisco, TX */
+export const SERVICE_AREA_CENTER = {
+  lat: 33.1507,
+  lng: -96.8236,
+  label: 'Frisco',
 } as const
 
 export const services = [
@@ -58,6 +63,13 @@ export const services = [
     description: 'Interior, exterior, and underglow lighting to match your style.',
     priceAnchor: 'led-lighting',
   },
+  {
+    id: 'offroad',
+    icon: '🛻',
+    title: 'Off-Road Accessories',
+    description: 'Automatic side steps, bed covers, and off-road lighting — installed at your location.',
+    priceAnchor: 'off-road-accessories',
+  },
 ] as const
 
 /** DashCam-style labor tiers — ranges until client updates exact numbers */
@@ -91,12 +103,25 @@ export const installTiers = [
   },
 ] as const
 
-export const trustItems = [
-  { icon: '★', label: 'Licensed & insured' },
-  { icon: '◎', label: 'Mobile — we come to you' },
-  { icon: '✓', label: `${SITE.serviceRadiusMiles} mi standard zone` },
-  { icon: '⚡', label: 'Pro install quality' },
-] as const
+export const trustItems: {
+  icon: string
+  label: string
+  href?: string
+  highlight?: boolean
+}[] = [
+  {
+    icon: '★',
+    label: `${SITE.googleReviewCount}+ five-star Google reviews`,
+    href: SITE.googleReviewsUrl,
+    highlight: true,
+  },
+  { icon: '◎', label: `${SITE.experienceYears}+ years of experience` },
+  { icon: '✓', label: `${SITE.serviceRadiusMiles} mi — no travel charge` },
+  {
+    icon: '🏠',
+    label: 'We come to you — no waiting at the shop',
+  },
+]
 
 export type PriceCategoryId =
   | 'car-audio'
@@ -104,6 +129,7 @@ export type PriceCategoryId =
   | 'marine-audio'
   | 'security-systems'
   | 'led-lighting'
+  | 'off-road-accessories'
 
 export const priceCategories: {
   id: PriceCategoryId
@@ -163,9 +189,27 @@ export const priceCategories: {
       { service: 'Full lighting package', range: '$399 – $1,200+', note: 'Custom quote' },
     ],
   },
+  {
+    id: 'off-road-accessories',
+    name: 'Off-Road Accessories',
+    icon: '🛻',
+    items: [
+      {
+        service: 'Automatic side steps',
+        range: '$199 – $799+',
+        note: 'Parts + installation; quote by vehicle',
+      },
+      { service: 'Bed covers', range: '$149 – $599+', note: 'Hard/soft covers; install included' },
+      {
+        service: 'Off-road lighting',
+        range: '$149 – $699+',
+        note: 'Light bars, pods, and wiring',
+      },
+    ],
+  },
 ]
 
-/** Representative cities inside ~50 mi of shop base (Anna, TX) — checker uses ZIP geocode; list is for scanability */
+/** Representative cities inside the service radius — checker uses ZIP geocode; list is for scanability */
 export const includedAreaCities = [
   'Anna',
   'McKinney',

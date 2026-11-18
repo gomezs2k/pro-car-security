@@ -23,12 +23,33 @@ export default function Home() {
       <section className="trust">
         <div className="trust-hatch" />
         <div className="trust-row">
-          {trustItems.map((item) => (
-            <div className="trust-item" key={item.label}>
-              <span aria-hidden>{item.icon}</span>
-              <span>{item.label}</span>
-            </div>
-          ))}
+          {trustItems.map((item) => {
+            const content = (
+              <>
+                <span aria-hidden>{item.icon}</span>
+                <span>{item.label}</span>
+              </>
+            )
+            const className = `trust-item${item.highlight ? ' trust-item--highlight' : ''}`
+            if (item.href) {
+              return (
+                <a
+                  className={`${className} trust-item--link`}
+                  href={item.href}
+                  key={item.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {content}
+                </a>
+              )
+            }
+            return (
+              <div className={className} key={item.label}>
+                {content}
+              </div>
+            )
+          })}
         </div>
       </section>
 
@@ -88,7 +109,7 @@ export default function Home() {
       <section className="contact-band section" id="contact" style={{ background: 'var(--bg-alt)' }}>
         <h2>Call or text to book</h2>
         <p>
-          {SITE.address} · {SITE.hours}
+          {SITE.locationLine} · {SITE.hours}
         </p>
         <a className="btn-primary" href={tel}>
           {SITE.phoneDisplay}
@@ -130,6 +151,17 @@ function HeroCopy() {
       <p className="hero-sub">
         Cars, motorcycles, and marine. See price ranges below, check the map for your ZIP, then call or text — we&apos;ll
         give you the real number for your build.
+      </p>
+      <p className="hero-perk">
+        Don&apos;t spend your day waiting at the shop —{' '}
+        <strong>we come to you</strong> so you can wait comfortably at home.
+      </p>
+      <p className="hero-reviews">
+        <a href={SITE.googleReviewsUrl} target="_blank" rel="noopener noreferrer">
+          ★★★★★ {SITE.googleReviewCount}+ five-star Google reviews
+        </a>
+        {' · '}
+        {SITE.experienceYears}+ years on the job
       </p>
       <div className="hero-cta">
         <a className="btn-primary" href={tel}>

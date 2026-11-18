@@ -38,7 +38,7 @@ export default function AIAssistant() {
       'what security systems do you install': 'We install car alarm systems, remote start systems, GPS trackers, and dash cameras. These can be installed on most vehicles and we\'ll make sure everything is set up correctly for your specific make and model.',
       'do you do led lighting': 'Yes! We do custom LED lighting including interior ambient lighting, exterior accent lighting, and underglow/RGB lighting for cars, trucks, and motorcycles. It\'s a great way to personalize your vehicle.',
       'what are your hours': 'We\'re open Monday through Saturday, 10AM to 5PM. We\'re closed on Sundays. You can call or text us at (214) 489-5107 during business hours.',
-      'where are you located': 'We\'re based at 725 Peach Tree Ln, Anna, TX 75409. But since we offer mobile service, we come to you! We serve the greater North Texas area including McKinney, Prosper, Celina, Melissa, Denton, and Van Alstyne.',
+      'where are you located': 'We\'re based in Anna, TX — mobile service across DFW and North Texas. We come to you! We serve McKinney, Prosper, Frisco, Celina, Melissa, Plano, Allen, and surrounding areas.',
     }
 
     let response = 'Great question! For the most accurate answer, I\'d recommend calling or texting us at (214) 489-5107 or visiting our services page. Our team can give you personalized recommendations for your specific vehicle and needs.'
