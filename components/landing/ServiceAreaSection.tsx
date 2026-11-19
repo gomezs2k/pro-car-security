@@ -2,8 +2,17 @@
 
 import { useState } from 'react'
 import { SITE, includedAreaCities, SERVICE_AREA_CENTER } from '@/lib/site-content'
+import dynamic from 'next/dynamic'
 import { milesBetween } from '@/lib/distance'
-import ServiceAreaMap from './ServiceAreaMap'
+
+const ServiceAreaMap = dynamic(() => import('./ServiceAreaMap'), {
+  ssr: false,
+  loading: () => (
+    <div className="area-map-leaflet area-map-loading" aria-busy="true">
+      Loading map…
+    </div>
+  ),
+})
 
 type CheckResult = 'in' | 'out' | 'error' | null
 
