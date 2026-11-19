@@ -1,3 +1,6 @@
+/** Looping page background — Dallas skyline at dusk (Pexels) */
+export const HERO_BG_VIDEO = '/video/dfw-hero.mp4' as const
+
 export const SITE = {
   name: 'Pro Car Security & Audio',
   phone: '2144895107',

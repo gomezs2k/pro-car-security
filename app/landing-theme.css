@@ -57,6 +57,45 @@
     var(--bg);
 }
 
+.bg-motion {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--bg);
+}
+
+.bg-motion video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180%;
+  height: 130%;
+  object-fit: cover;
+  object-position: 62% 22%;
+}
+
+.bg-motion .bg-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(12, 11, 13, 0.52) 0%,
+    rgba(12, 11, 13, 0.68) 50%,
+    rgba(12, 11, 13, 0.92) 100%
+  );
+}
+
+.bg-motion .bg-tint {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-motion video {
+    display: none;
+  }
+}
+
 .page {
   position: relative;
   z-index: 1;
@@ -1193,6 +1232,31 @@
     justify-content: center;
     flex-wrap: wrap;
     padding: 15px 24px;
+  }
+
+  .bg-motion video {
+    width: 128%;
+    height: 128%;
+    object-position: 68% 18%;
+  }
+
+  .bg-motion .bg-tint {
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      120% 100% at 50% 30%,
+      rgba(12, 11, 13, 0) 0%,
+      rgba(12, 11, 13, 0.72) 100%
+    );
+  }
+
+  .bg-motion .bg-fade {
+    background: linear-gradient(
+      rgba(12, 11, 13, 0.38) 0%,
+      rgba(12, 11, 13, 0.6) 50%,
+      rgba(12, 11, 13, 0.88) 100%
+    );
   }
 
   .hero {

@@ -3,6 +3,7 @@ import { Archivo, Archivo_Black, Barlow_Semi_Condensed } from 'next/font/google'
 import './globals.css'
 import './landing-theme.css'
 import 'leaflet/dist/leaflet.css'
+import HeroBackgroundVideo from '@/components/landing/HeroBackgroundVideo'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import MobileCtaBar from '@/components/MobileCtaBar'
@@ -48,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${archivo.variable} ${archivoBlack.variable} ${barlow.variable}`}>
       <body className={`${archivo.className} landing-body`}>
-        <div className="bg-shell" aria-hidden />
+        <HeroBackgroundVideo />
         <div className="page">
           <Header />
           {children}
